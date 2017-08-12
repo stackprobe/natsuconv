@@ -1,0 +1,11 @@
+m4v=-ab 160k
+mp3=-ab 160k
+mp4=-ab 160k
+mpg=-ab 160k
+mpeg=-ab 160k
+avi=-ab 160k
+wma=-ab 160k
+wmv=-ab 160k
+ogg=-ab 160k
+ogv=-ab 160k
+*=
