@@ -121,6 +121,8 @@ namespace Charlotte
 			ffmpegDir = Gnd.ffmpegDir;
 			Gnd.ConvLog.Writeln("ffmpegDir.1: " + ffmpegDir);
 
+			// TODO
+
 			const string ffmpegFileErrorTrailer = "\n設定 / ffmpeg / ffmpegのパスを確認して下さい。";
 
 			if (ffmpegDir == "")
