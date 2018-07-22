@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Charlotte.Tools;
+using System.IO;
 
 namespace Charlotte
 {
@@ -57,6 +59,29 @@ namespace Charlotte
 
 		private void Okボタン_Click(object sender, EventArgs e)
 		{
+			// check
+			{
+				string dir = this.ffmpegのパス.Text;
+
+				dir = Path.GetFullPath(dir);
+
+				string SYSTEM_DRV_ROOT = Environment.GetEnvironmentVariable("SystemDrive")[0] + @":\";
+
+				if (StringTools.IsSame(dir, SYSTEM_DRV_ROOT, true))
+				{
+					if (MessageBox.Show(
+						"システムドライブのルートディレクトリが指定されました。\n" +
+						"間違いありませんか？",
+						"確認",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Warning
+						)
+						!= System.Windows.Forms.DialogResult.Yes
+						)
+						return;
+				}
+			}
+
 			Gnd.ffmpegDir = this.ffmpegのパス.Text;
 			Gnd.SaveData();
 			this.Close();
