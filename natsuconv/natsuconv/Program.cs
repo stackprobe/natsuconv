@@ -31,6 +31,13 @@ namespace Charlotte
 				CheckSelfDir();
 				CheckCopiedExe();
 
+				Gnd.NormLog = new Logger(StringTools.Combine(
+					BootTools.SelfDir,
+					Path.GetFileNameWithoutExtension(BootTools.SelfFile) + "_normal.log"
+					));
+
+				Utils.AntiWindowsDefenderSmartScreen();
+
 				Gnd.ConvLog = new Logger(StringTools.Combine(
 					BootTools.SelfDir,
 					Path.GetFileNameWithoutExtension(BootTools.SelfFile) + "_conversion.log"
@@ -47,6 +54,9 @@ namespace Charlotte
 				// < orig
 
 				Gnd.SaveData();
+
+				Gnd.NormLog.Close();
+				Gnd.ConvLog.Close();
 
 				GlobalProcMtx.Release();
 				procMutex.ReleaseMutex();

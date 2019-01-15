@@ -23,6 +23,7 @@ namespace Charlotte
 				_fs = new StreamWriter(_file, false, Encoding.UTF8);
 
 			_fs.WriteLine("[" + DateTime.Now + "] " + line);
+			_fs.Flush();
 		}
 
 		public void Close()

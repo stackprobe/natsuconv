@@ -64,6 +64,12 @@ namespace Charlotte
 			}
 		}
 
+		public static bool Is初回起動()
+		{
+			return File.Exists(DATA_FILE) == false; // ? SaveData()未実行
+		}
+
+		public static Logger NormLog;
 		public static Logger ConvLog;
 
 		public static Conv Conv;
