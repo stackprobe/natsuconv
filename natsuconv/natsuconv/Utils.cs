@@ -53,7 +53,7 @@ namespace Charlotte
 		{
 			WriteLog("awdss_1");
 
-			if (Gnd.Is初回起動())
+			if (Is初回起動())
 			{
 				WriteLog("awdss_2");
 
@@ -86,6 +86,11 @@ namespace Charlotte
 		}
 
 		// < sync
+
+		public static bool Is初回起動()
+		{
+			return Gnd.Is初回起動();
+		}
 
 		public static void WriteLog(object message)
 		{
