@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Charlotte.Tools
 {
-	public class DebugTools
+	public static class DebugTools
 	{
 #if DEBUG
 		public static void WriteLog_Console(string line)

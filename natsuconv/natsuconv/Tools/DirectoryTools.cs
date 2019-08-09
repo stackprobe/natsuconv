@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace Charlotte.Tools
 {
-	public class DirectoryTools
+	public static class DirectoryTools
 	{
 		public static List<string> GetAllDir(string rootDir)
 		{

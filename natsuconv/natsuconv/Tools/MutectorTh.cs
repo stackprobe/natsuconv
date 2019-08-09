@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Charlotte.Tools
 {
-	public class MutectorTh
+	public static class MutectorTh
 	{
 		private const int BUFF_SIZE_MAX = 20000000; // 20 MB
 		private const int M_SIZE_CONST = 100;

@@ -7,7 +7,7 @@ using Charlotte.Tools;
 
 namespace Charlotte
 {
-	public class Gnd
+	public static class Gnd
 	{
 		public static string ffmpegDir = "";
 		public static string InputDir = "";

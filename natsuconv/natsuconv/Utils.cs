@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Charlotte
 {
-	public class Utils
+	public static class Utils
 	{
 		public static void _ファイル・フォルダ選択ボタンに引っ付ける(Control ctrl, Button btn)
 		{
