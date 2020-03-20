@@ -10,4 +10,4 @@ C:\Factory\SubTools\EmbedConfig.exe --factory-dir-disabled out\Master.exe
 
 C:\Factory\SubTools\zip.exe /O out natsuconv
 
-PAUSE
+IF NOT "%1" == "/-P" PAUSE

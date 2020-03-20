@@ -66,7 +66,17 @@ namespace Charlotte
 
 		public static bool Is初回起動()
 		{
+#if true
+			string sigFile = BootTools.SelfFile + ".awdss.sig";
+
+			if (File.Exists(sigFile))
+				return false;
+
+			FileTools.CreateFile(sigFile);
+			return true;
+#else // old
 			return File.Exists(DATA_FILE) == false; // ? SaveData()未実行
+#endif
 		}
 
 		public static Logger NormLog;
