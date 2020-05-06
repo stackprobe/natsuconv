@@ -86,6 +86,7 @@
     <Compile Include="ResultDlg.Designer.cs">
       <DependentUpon>ResultDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaveLoadDialogs.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Tools\ArrayTools.cs" />
     <Compile Include="Tools\AutoTable.cs" />
