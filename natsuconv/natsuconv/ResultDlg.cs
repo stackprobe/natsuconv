@@ -52,7 +52,7 @@ namespace Charlotte
 				lines.Add("----");
 				lines.Add("処理に成功したファイル数：" + Gnd.Conv.ProcessedFileCount);
 				lines.Add("エラーになったファイル数：" + Gnd.Conv.ErrorFileCount);
-				lines.Add("既にノーマライズされていて処理しなかったファイル数：" + Gnd.Conv.NotProcessedFileCount);
+				lines.Add("既に音量均一化されていて処理しなかったファイル数：" + Gnd.Conv.NotProcessedFileCount);
 				lines.Add("その他のファイル数：" + Gnd.Conv.OtherFileCount);
 				lines.Add("----");
 				lines.Add("コピーに失敗したファイル数：" + Gnd.Conv.FailedCopyFileCount);

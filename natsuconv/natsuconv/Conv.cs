@@ -273,7 +273,7 @@ namespace Charlotte
 			if (Gnd.SameDir)
 			{
 				if (MessageBox.Show(
-					"オプション「入力フォルダと同じ場所に出力する」が有効になっています。入力フォルダの配下にある動画・音楽ファイルが直接ノーマライズ（上書き）されます。\n続行しても宜しいですか？",
+					"オプション「入力フォルダと同じ場所に出力する」が有効になっています。入力フォルダの配下にある動画・音楽ファイルが直接処理（上書き）されます。\n続行しても宜しいですか？",
 					"確認",
 					MessageBoxButtons.OKCancel,
 					MessageBoxIcon.Information
@@ -450,7 +450,7 @@ namespace Charlotte
 						break;
 
 					case ConvFileRet_e.NOT_PROCESSED:
-						Gnd.ConvLog.Writeln("対象ファイルは既にノーマライズされています。(処理不要)");
+						Gnd.ConvLog.Writeln("対象ファイルは既に音量均一化されています。(処理不要)");
 						NotProcessedFileCount++;
 						if (NotProcessedFileCopy)
 						{
@@ -478,7 +478,7 @@ namespace Charlotte
 			Gnd.ConvLog.Writeln("ファイルの総数: " + TotalFileCount);
 			Gnd.ConvLog.Writeln("処理に成功したファイル数: " + ProcessedFileCount);
 			Gnd.ConvLog.Writeln("エラーになったファイル数: " + ErrorFileCount);
-			Gnd.ConvLog.Writeln("既にノーマライズされていて処理しなかったファイル数: " + NotProcessedFileCount);
+			Gnd.ConvLog.Writeln("既に音量均一化されていて処理しなかったファイル数: " + NotProcessedFileCount);
 			Gnd.ConvLog.Writeln("その他のファイル数: " + OtherFileCount);
 			Gnd.ConvLog.Writeln("コピーに失敗したファイル数: " + FailedCopyFileCount);
 		}
@@ -566,7 +566,7 @@ namespace Charlotte
 					File.Delete(StringTools.Combine(WorkDatDir, "0004.report"));
 					File.Delete(StringTools.Combine(WorkDatDir, "0004.report-main"));
 
-					Gnd.ConvLog.Writeln("音量をノーマライズします。");
+					Gnd.ConvLog.Writeln("音量を均一化します。");
 
 					try
 					{
@@ -610,9 +610,9 @@ namespace Charlotte
 					}
 
 					if (File.Exists(StringTools.Combine(WorkDatDir, "0003.wav")) == false)
-						throw new Exception("音量のノーマライズはキャンセルされました。(多分、処理不要)"); // -> 継続
+						throw new Exception("音量の均一化はキャンセルされました。(多分、処理不要)"); // -> 継続
 
-					Gnd.ConvLog.Writeln("音量をノーマライズしました。");
+					Gnd.ConvLog.Writeln("音量を均一化しました。");
 
 					File.Delete(wavFile);
 					File.Move(
@@ -642,7 +642,7 @@ namespace Charlotte
 
 			if (audioProcessedCount == 0)
 			{
-				Gnd.ConvLog.Writeln("ノーマライズを実行した音声ストリームはありません。");
+				Gnd.ConvLog.Writeln("音量均一化を実行した音声ストリームはありません。");
 				return ConvFileRet_e.NOT_PROCESSED;
 			}
 

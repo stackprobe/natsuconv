@@ -121,8 +121,8 @@
 			// 
 			// _入力フォルダ
 			// 
-			this._入力フォルダ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this._入力フォルダ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this._入力フォルダ.Location = new System.Drawing.Point(105, 46);
 			this._入力フォルダ.MaxLength = 300;
 			this._入力フォルダ.Name = "_入力フォルダ";
@@ -143,8 +143,8 @@
 			// 
 			// _出力フォルダ
 			// 
-			this._出力フォルダ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this._出力フォルダ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this._出力フォルダ.Location = new System.Drawing.Point(105, 79);
 			this._出力フォルダ.MaxLength = 300;
 			this._出力フォルダ.Name = "_出力フォルダ";
@@ -210,7 +210,7 @@
 			this._処理しなかったファイルもコピー.Name = "_処理しなかったファイルもコピー";
 			this._処理しなかったファイルもコピー.Size = new System.Drawing.Size(516, 24);
 			this._処理しなかったファイルもコピー.TabIndex = 9;
-			this._処理しなかったファイルもコピー.Text = "既にノーマライズされている (処理しなかった) 動画・音楽ファイルもコピーする。";
+			this._処理しなかったファイルもコピー.Text = "既に音量均一化されている (処理しなかった) 動画・音楽ファイルもコピーする。";
 			this._処理しなかったファイルもコピー.UseVisualStyleBackColor = true;
 			// 
 			// MainWin
