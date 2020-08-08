@@ -442,7 +442,7 @@ namespace Charlotte
 					case ConvFileRet_e.ERROR:
 						Gnd.ConvLog.Writeln("対象ファイルの処理に失敗しました。");
 						ErrorFileCount++;
-						LastFailedFile = GetLFileUI(file);
+						LastFailedFile = GetLocalFileUI(file);
 						if (ErrorFileCopy)
 						{
 							CopyFileRDirToWDir(file, "ERROR");
@@ -490,7 +490,7 @@ namespace Charlotte
 				throw new Exception("要求により、中止しました。(ConvFile)");
 			}
 
-			Gnd.BusyDlg.SetMessage(GetLFileUI(file) + " なう");
+			Gnd.BusyDlg.SetMessage(GetLocalFileUI(file) + " を処理しています。パス名=" + file);
 
 			string ext = Path.GetExtension(file);
 			Gnd.ConvLog.Writeln("ext: " + ext);
@@ -809,11 +809,11 @@ namespace Charlotte
 			{
 				Gnd.ConvLog.Writeln(e);
 				FailedCopyFileCount++;
-				LastFailedFile = GetLFileUI(file);
+				LastFailedFile = GetLocalFileUI(file);
 			}
 		}
 
-		private string GetLFileUI(string file)
+		private string GetLocalFileUI(string file)
 		{
 			string lFile = Path.GetFileName(file);
 

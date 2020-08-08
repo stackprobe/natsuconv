@@ -69,17 +69,19 @@
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._メッセージ});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 156);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 157);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(684, 23);
+			this.statusStrip1.Size = new System.Drawing.Size(684, 22);
 			this.statusStrip1.TabIndex = 2;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
 			// _メッセージ
 			// 
 			this._メッセージ.Name = "_メッセージ";
-			this._メッセージ.Size = new System.Drawing.Size(104, 18);
+			this._メッセージ.Size = new System.Drawing.Size(669, 17);
+			this._メッセージ.Spring = true;
 			this._メッセージ.Text = "準備しています...";
+			this._メッセージ.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// _ステータス
 			// 
