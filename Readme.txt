@@ -7,7 +7,7 @@
 ビルド済み配布物
 ----------------
 
-http://stackprobe.dip.jp/natsuconv
+http://stackprobe.ccsp.mydns.jp/natsuconv
 
 
 マニュアル
